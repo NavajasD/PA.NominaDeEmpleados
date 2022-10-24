@@ -29,6 +29,11 @@ public class EmpleadoAsalariado  extends Empleado{
     }
 
     @Override
+    public String controlar(String tarea) {
+        return "Este empleado no esta autorizado para controlar la tarea: "+tarea;
+    }
+
+    @Override
     public String toString() {
         var sb = new StringBuilder();
         sb.append("Empleado asalariado: ").append(super.toString());

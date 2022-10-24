@@ -30,6 +30,12 @@ public class EmpleadoBaseMasComision extends EmpleadoPorComision{
     }
 
     @Override
+    public String controlar(String tarea) {
+        return "El empleado: "+obtenerPrimerNombre()+" "+obtenerApellidoPaterno()+"\n"
+                +"Controla la tarea: "+tarea;
+    }
+
+    @Override
     public String toString() {
         var sb = new StringBuilder();
         sb.append("Empleado por comision con salario base: ").append(super.baseToString());
